@@ -10,7 +10,7 @@
     },
     "AzureCognitiveSearch": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), '-search')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), '-search-tony')]",
       "metadata": {
         "description": "Azure Cognitive Search Resource"
       }
@@ -31,7 +31,7 @@
     },
     "HostingPlanName": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), '-plan')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), '-plan-tony')]",
       "metadata": {
         "description": "Name of App Service plan"
       }
@@ -59,42 +59,42 @@
     },
     "StorageAccountName": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), 'str')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), 'str-tony')]",
       "metadata": {
         "description": "Name of Storage Account"
       }
     },
     "WebsiteName": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), '-site')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), '-site-tony')]",
       "metadata": {
         "description": "Name of Web App"
       }
     },
     "FunctionName": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), '-batchfunc')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), '-batchfunc-tony')]",
       "metadata": {
         "description": "Name of Function App for Batch document processing"
       }
     },
     "ApplicationInsightsName": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), '-appinsights')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), '-appinsights-tony')]",
       "metadata": {
         "description": "Name of Application Insights"
       }
     },
     "FormRecognizerName": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), '-formrecog')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), '-formrecog-tony')]",
       "metadata": {
         "description": "Azure Form Recognizer Name"
       }
     },
     "TranslatorName": {
       "type": "string",
-      "defaultValue": "[concat(parameters('ResourcePrefix'), '-translator')]",
+      "defaultValue": "[concat(parameters('ResourcePrefix'), '-translator-tony')]",
       "metadata": {
         "description": "Azure Translator Name"
       }
@@ -147,8 +147,8 @@
   },
   "variables": {
     "WebAppImageName": "DOCKER|fruocco/oai-embeddings",
-    "BlobContainerName": "documents",
-    "QueueName": "doc-processing",
+    "BlobContainerName": "documents-tony",
+    "QueueName": "doc-processing-tony",
     "ClientKey": "[concat(uniqueString(guid(resourceGroup().id, deployment().name)), parameters('newGuid'), 'Tg2%')]"
   },
   "resources": [
